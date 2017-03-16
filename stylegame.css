@@ -1,0 +1,186 @@
+/*      Copyright (C) 2015  Carlos J. Costa                 */
+#pinguim{
+	position: absolute;
+	display: none;
+  	width: 32px;
+  	height: 32px;
+  	background: url('character.png') no-repeat;}
+
+#pinguim.left-right { background-position: 0px -32px; }
+#pinguim.left-stand { background-position: -32px -32px; }
+#pinguim.left-left { background-position: -64px -32px; }
+#pinguim.right-right { background-position: -64px -64px; }
+#pinguim.right-stand { background-position: -32px -64px; }
+#pinguim.right-left { background-position: -0px -64px; }
+#pinguim.back-right { background-position: 0px -96px; }
+#pinguim.back-stand { background-position: -32px -96px; }
+#pinguim.back-left { background-position: -64px -96px; }
+#pinguim.front-right { background-position: 0px 0px; }
+#pinguim.front-stand { background-position: -32px 0px; }
+#pinguim.front-left { background-position: -64px 0px; }
+/*      Copyright (C) 2015  Carlos J. Costa                 */
+
+#section #poliwhirl { position: absolute; top: 340px; left: 950px; width: 120px; }
+#section #bulbasaur { position: absolute; top: 60px; left: 190px; width: 50px; }
+#section #charizard1{ position: absolute; top: 210px; left: 395px; width: 140px; }
+/* #section #charizardfire { position: absolute; top: 95px; left: 540px; width: 150px; } */
+
+/* Início do jogo */
+#imgStartGame {width: 90%;
+	position: absolute;
+    z-index: 3;
+  	padding: 4px;
+  	border: 4px outset #50a6d8;
+	border-radius: 8px;
+	margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    cursor: pointer; cursor: hand;}
+#MapaDoJogo {width: 98%;
+  	padding: 4px;
+  	border: 4px outset #50a6d8;
+	border-radius: 8px;
+  	display: block;
+	margin-left: auto;
+	margin-right: auto;}
+
+#fish {width: 4%;	position: absolute;	display: none;
+/* Código W3Schools */
+	-webkit-animation: mover 0.5s infinite  alternate;
+    animation: mover 0.5s infinite  alternate;}
+	@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }}
+	@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }}
+
+#lula {width: 2.5%; position: absolute;	display: none;
+/* Código W3Schools */
+	-webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;}
+	@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }}
+	@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }}
+	
+#boss {width: 150px; height: 150px;	position: absolute;	display: none;
+/* Código W3Schools */
+	-webkit-animation: mover 0.5s infinite  alternate;
+    animation: mover 0.5s infinite  alternate;}
+
+/* Pokémons no mapa */
+#section {display: inline-block;
+	vertical-align: top;
+	width: 65%;
+	height: 700px;
+	position: relative;}
+
+#divGameOver{display: none;
+    width: 1000px;
+    height: 800px;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 2;
+    margin: auto;}
+
+#imgGameOver {width: 100%;
+  	animation: blink 3s;
+    animation-iteration-count: infinite;
+    margin-top: 0px;}
+@keyframes blink {from {opacity: 1;}
+to {opacity: 0.7;}}
+
+/* Instruções, Tempo */	
+#content-left {padding: 5px;
+	display: inline-block;
+	vertical-align: top;
+	width: 16%;
+	height: 100%;}
+#size2 {width: 100%; padding: -1px;
+  	border: 4px outset #50a6d8;
+	border-radius: 8px;}
+#margem {margin-top: 0px; text-align: center;}
+#aside {	padding: 5px;
+	display: inline-block;
+	vertical-align: top;
+	width: 15%;
+	height: 100%;}
+#aside img {display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 5px;}
+#box2 {border: 4px outset #50a6d8;
+	border-radius: 6px;
+    box-shadow: 0 6px 10px #999;
+    width: 90%;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ff3300;
+    font-size: 60px;
+    text-align: center;
+	vertical-align: middle;}
+#clock {width: 200px; margin-top: 0px;}
+#aside #clock {width: 160px;}
+#cronometro {animation-duration: 1s;
+	animation-name: blink;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;}
+@keyframes blink {	from {opacity: 1;}
+    to {opacity: 0.5;}}
+
+/* Pontuação */	
+#placar {width: 100%; margin-bottom: 20px;}
+#score {	width: 35%;
+	height: 80px;
+	float: left;
+	border: 4px outset #50a6d8;
+	border-radius: 8px;
+	box-shadow: 0 6px 10px #999;
+	padding: 10px;
+	text-align: center;}
+#showScore{display: block;
+	width: 20px;
+    font-size: 10px;
+    background-color: #50a6d8;
+    padding: 1px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 6px 10px #999;}
+#totalScore {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 70px; 
+	font-size: 50px;
+	color: green;}
+
+#best {width: 35%;
+	height: 80px;
+	float: left;
+	border: 3px outset #50a6d8;
+	border-radius: 8px;
+	box-shadow: 0 6px 10px #999;
+	padding: 10px;
+	margin-left: 15px;
+	text-align: center;}
+
+#bestScore {text-align: center;
+	vertical-align: middle;
+	line-height: 70px; 
+	font-size: 60px;
+	color: #50a6d8;}
+/* Pontuação */	
+
+/* ul {
+	list-style-type: none; 
+} */
